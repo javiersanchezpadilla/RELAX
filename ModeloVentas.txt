@@ -1,8 +1,9 @@
 -- Este es un ejemplo para la creacion de DataSET
+-- Para la clase de Fundamentos de Bases de Datos
 group: ventas
 
 ARTICULOS = {
-artId:number, artNombre:string, artColor:string, artPrecio:number, fkidProv:number
+artId:number, artNombre:string, artColor:string, artPrecio:number, proId:number
 1, 'TIPO TALLER CABLEDROP 2X1.5', 'AZUL', 55, 14
 2, 'PALA GRIS', 'AMARILLO', 162, 1
 3, 'ARGOS GRIS', 'ROSA', 10, 2
@@ -264,7 +265,7 @@ proId:number, proNombre:string
 }
 
 VENTASMAESTRO={
-vmId:number, vmFecha:string, vmFolio:number, vmNeto:number, vmIva:number, vmTotal:number, vmIdcliente:number
+vmId:number, vmFecha:string, vmFolio:number, vmNeto:number, vmIva:number, vmTotal:number, cliId:number
 1, '10/02/2023',73408, 456, 95, 552, 13
 2, '11/02/2023',73409, 217, 45, 263, 15
 3, '11/02/2023',73410, 182, 38, 221, 17
@@ -368,7 +369,7 @@ vmId:number, vmFecha:string, vmFolio:number, vmNeto:number, vmIva:number, vmTota
 }
 
 VENTASDETALLE={
-vdId:number, vdIdventas:number, vdIdarticulo:number, cantidad:number, vdPrecio:number, vdCosto:number
+vdId:number, vmId:number, artId:number, vdcantidad:number, vdPrecio:number, vdCosto:number
 1, 1, 11, 1, 39, 19
 2, 1, 16, 1, 39, 19
 3, 1, 13, 1, 186, 103
